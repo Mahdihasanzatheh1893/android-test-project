@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Project Application</string>
+    <string name="welcome">welcome to application</string>
+    <string name="my_name">mahdi hasanzadeh</string>
+    <string name="test">test</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="_0902">0902</string>
+    <string name="email_address">email address</string>
+    <string name="text">text</string>
+    <string name="daneshjooyar">Daneshjooyar</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="mahdi_hasanzadeh">Mahdi Hasanzadeh</string>
+    <string name="phone_number">0992 *** ****</string>
+    <string name="complete_form">complete form</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone_number_edt">Phone Number</string>
+    <string name="ability">Ability…</string>
+    <string name="chose_picture">chose picture</string>
+    <string name="next_image">next</string>
+    <string name="back_image">back</string>
+    <string name="chose_profile">chose profile</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="chose_language">chose language</string>
+    <string name="laravel">Laravel</string>
+    <string name="php">Php</string>
+    <string name="java">Java</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="accept">accept</string>
+</resources>

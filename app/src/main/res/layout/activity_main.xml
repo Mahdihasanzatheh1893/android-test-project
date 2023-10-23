@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/test2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6D9D4">
+
+            <TextView
+                android:id="@+id/txt_complete_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/complete_form"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_first_name"
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/txt_complete_form"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back_edit_text"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/gray400" />
+
+            <EditText
+                android:id="@+id/edt_last_name"
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/txt_complete_form"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back_edit_text"
+                android:hint="@string/last_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/gray400" />
+
+            <EditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/edt_first_name"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back_edit_text"
+                android:hint="@string/phone_number_edt"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/gray400" />
+
+            <EditText
+                android:id="@+id/edt_ability"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/edt_phone_number"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back_edit_text"
+                android:hint="@string/ability"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/gray400" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/edt_ability"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back_edit_text"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/gray400" />
+
+            <CheckBox
+                android:id="@+id/checkbox_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_email"
+                android:layout_marginStart="15dp"
+                android:minHeight="48dp"
+                android:text="@string/male" />
+
+            <CheckBox
+                android:id="@+id/checkbox_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_email"
+                android:layout_toEndOf="@id/checkbox_male"
+                android:minHeight="48dp"
+                android:text="@string/female" />
+
+            <TextView
+                android:id="@+id/txt_chose_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkbox_male"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/chose_profile"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_back_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@id/txt_chose_picture"
+                android:layout_marginTop="30dp"
+                android:layout_toStartOf="@id/img_chose_profile"
+                android:clickable="true"
+                android:contentDescription="@string/back_image"
+                android:focusable="true"
+                android:src="@drawable/icon_back_24" />
+
+            <ImageView
+                android:id="@+id/img_next_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@id/txt_chose_picture"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/img_chose_profile"
+                android:clickable="true"
+                android:contentDescription="@string/next_image"
+                android:focusable="true"
+                android:src="@drawable/icon_next_24" />
+
+            <ImageView
+                android:id="@+id/img_chose_profile"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/txt_chose_picture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/test"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon2" />
+
+            <TextView
+                android:id="@+id/txt_chose_program"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_chose_profile"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/chose_language"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_chose_program"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_kotlin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/kotlin" />
+
+                <RadioButton
+                    android:id="@+id/radio_java"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/java" />
+
+                <RadioButton
+                    android:id="@+id/radio_php"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/php" />
+
+                <RadioButton
+                    android:id="@+id/radio_laravel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/laravel" />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
