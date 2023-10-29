@@ -30,4 +30,5 @@
     <string name="java">Java</string>
     <string name="kotlin">Kotlin</string>
     <string name="accept">accept</string>
+    <string name="ok">OK</string>
 </resources>

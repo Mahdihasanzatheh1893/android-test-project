@@ -9,11 +9,11 @@ import com.example.projectapplication.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
-    private var count=0
+    private var count = 0
 
-    private val picture= arrayOf(
+    private val picture = arrayOf(
         R.drawable.icon1,
         R.drawable.icon2,
         R.drawable.icon3,
@@ -24,11 +24,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.imgNextImage.setOnClickListener { next() }
         binding.imgBackImage.setOnClickListener { previous() }
+
+        binding.btnMainOk.setOnClickListener {
+            binding.progressTest.progress += 5
+        }
 
         findViewById<RadioButton>(R.id.radio_kotlin).setOnCheckedChangeListener { buttonView, isChecked ->
             Log.d("RADIO", "kotlin is checked: $isChecked")
@@ -46,12 +50,14 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     private fun next() {
         if (count < 4) {
             count++
             setImage()
         }
     }
+
     private fun previous() {
         if (count > 0) {
             count--

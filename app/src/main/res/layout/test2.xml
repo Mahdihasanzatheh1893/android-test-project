@@ -34,13 +34,18 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:layout_alignParentTop="true"
-        android:layout_margin="30dp"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/icon_done"
         android:layout_width="45dp"
+        android:id="@+id/img_test2_accept"
         android:layout_height="45dp"
-        android:contentDescription="@string/accept" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/accept"
+        android:src="@drawable/icon_done" />
+
 
 
 </RelativeLayout>
