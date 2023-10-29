@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         binding.imgBackImage.setOnClickListener { previous() }
 
         binding.btnMainOk.setOnClickListener {
-            binding.progressTest.progress += 5
+            binding.progressTest.progress += 10
         }
 
         findViewById<RadioButton>(R.id.radio_kotlin).setOnCheckedChangeListener { buttonView, isChecked ->
