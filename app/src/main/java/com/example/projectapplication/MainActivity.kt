@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.RadioButton
+import android.widget.Toast
 import com.example.projectapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -34,41 +35,44 @@ class MainActivity : AppCompatActivity() {
             binding.progressTest.progress += 10
         }
 
-        findViewById<RadioButton>(R.id.radio_kotlin).setOnCheckedChangeListener { buttonView, isChecked ->
-            Log.d("RADIO", "kotlin is checked: $isChecked")
-        }
+        binding.rgTest.setOnCheckedChangeListener { _, radioButtonId ->
+            when (radioButtonId) {
+                R.id.radio_java -> {
+                    Toast.makeText(this, "java", Toast.LENGTH_SHORT).show()
+                }
 
-        findViewById<RadioButton>(R.id.radio_java).setOnCheckedChangeListener { buttonView, isChecked ->
-            Log.d("RADIO", "java is checked: $isChecked")
-        }
-        findViewById<RadioButton>(R.id.radio_php).setOnCheckedChangeListener { buttonView, isChecked ->
-            Log.d("RADIO", "php is checked: $isChecked")
-        }
+                R.id.radio_kotlin -> {
+                    Toast.makeText(this, "kotlin", Toast.LENGTH_SHORT).show()
+                }
 
-        findViewById<RadioButton>(R.id.radio_laravel).setOnCheckedChangeListener { buttonView, isChecked ->
-            Log.d("RADIO", "laravel is checked: $isChecked")
-        }
+                R.id.radio_laravel -> {
+                    Toast.makeText(this, "laravel", Toast.LENGTH_SHORT).show()
+                }
+                R.id.radio_php -> {
+                    Toast.makeText(this, "php", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-    }
-
-    private fun next() {
-        if (count < 4) {
-            count++
-            setImage()
         }
     }
+        private fun next() {
+            if (count < 4) {
+                count++
+                setImage()
+            }
+        }
 
-    private fun previous() {
-        if (count > 0) {
-            count--
-            setImage()
+        private fun previous() {
+            if (count > 0) {
+                count--
+                setImage()
+            }
+        }
+
+        private fun setImage() {
+            binding.imgChoseProfile.setImageResource(picture[count])
         }
     }
-
-    private fun setImage() {
-        binding.imgChoseProfile.setImageResource(picture[count])
-    }
-}
 
 
 
